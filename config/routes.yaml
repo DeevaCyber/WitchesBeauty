@@ -1,0 +1,13 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+witches_beauty_home:
+  path: /Home
+  controller: App\Controller\HomeController::home
+
+
+
+witches_beauty_about:
+  path: /About
+  controller: App\Controller\AboutController::about
