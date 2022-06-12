@@ -15,81 +15,81 @@ class PRODUCT
 
 
     #[ORM\Column(type: 'string', length: 25)]
-    private $name_product;
+    private $name;
 
     #[ORM\Column(type: 'text', nullable: true)]
-    private $desc_product;
+    private $description;
 
     #[ORM\Column(type: 'string', length: 25)]
-    private $category_product;
+    private $category;
 
     #[ORM\Column(type: 'string', length: 25)]
-    private $type_product;
+    private $type;
 
     #[ORM\Column(type: 'float')]
-    private $price_product;
+    private $price;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getNameProduct(): ?string
+    public function getName(): ?string
     {
-        return $this->name_product;
+        return $this->name;
     }
 
-    public function setNameProduct(string $name_product): self
+    public function setName(string $name): self
     {
-        $this->name_product = $name_product;
+        $this->name = $name;
 
         return $this;
     }
 
-    public function getDescProduct(): ?string
+    public function getDescription(): ?string
     {
-        return $this->desc_product;
+        return $this->description;
     }
 
-    public function setDescProduct(?string $desc_product): self
+    public function setDesc(?string $desc): self
     {
-        $this->desc_product = $desc_product;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getCategoryProduct(): ?string
+    public function getCategory(): ?string
     {
-        return $this->category_product;
+        return $this->category;
     }
 
-    public function setCategoryProduct(string $category_product): self
+    public function setCategory(string $category): self
     {
-        $this->category_product = $category_product;
+        $this->category = $category;
 
         return $this;
     }
 
-    public function getTypeProduct(): ?string
+    public function getType(): ?string
     {
-        return $this->type_product;
+        return $this->type;
     }
 
-    public function setTypeProduct(string $type_product): self
+    public function setTypeProduct(string $type): self
     {
-        $this->type_product = $type_product;
+        $this->type = $type;
 
         return $this;
     }
 
-    public function getPriceProduct(): ?float
+    public function getPrice(): ?float
     {
-        return $this->price_product;
+        return $this->price;
     }
 
-    public function setPriceProduct(float $price_product): self
+    public function setPrice(float $price): self
     {
-        $this->price_product = $price_product;
+        $this->price = $price;
 
         return $this;
     }

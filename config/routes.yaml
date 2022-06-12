@@ -6,7 +6,17 @@ witches_beauty_home:
   path: /Home
   controller: App\Controller\HomeController::home
 
+witches_beauty_product_face:
+  path: /Face
+  controller: App\Controller\ProductController::face
 
+witches_beauty_product_eyes:
+  path: /Eyes
+  controller: App\Controller\ProductController::eyes
+
+witches_beauty_product_lips:
+  path: /Lips
+  controller: App\Controller\ProductController::lips
 
 witches_beauty_about:
   path: /About

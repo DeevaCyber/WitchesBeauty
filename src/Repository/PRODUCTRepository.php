@@ -47,7 +47,7 @@ class PRODUCTRepository extends ServiceEntityRepository
         $entityManager = $this->getEntityManager();
 
         $query = $entityManager->createQuery(
-          'SELECT * FROM App\Entity\PRODUCT WHERE category_product = category'
+          'SELECT * FROM App\Entity\PRODUCT WHERE category = category'
           )->setParameter('category',$category);
           return $query->getResult();
     }
@@ -60,7 +60,7 @@ class PRODUCTRepository extends ServiceEntityRepository
       $entityManager = $this->getEntityManager();
 
       $query = $entityManager->createQuery(
-        'SELECT * FROM App\Entity\PRODUCT WHERE type_product = type'
+        'SELECT * FROM App\Entity\PRODUCT WHERE type = type'
         )->setParameter('type',$type);
         return $query->getResult();
     }

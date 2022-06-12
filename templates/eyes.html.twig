@@ -1,11 +1,40 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<!--
+<ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="btn btn-outline-secondary" href="#" role="button">Mascara</a>
+  </li>
+  <li class="nav-item">
+    <a class="btn btn-outline-secondary" href="#" role="button">Fard à paupières</a>
+  </li>
+  <li class="nav-item">
+    <a class="btn btn-outline-secondary" href="#" role="button">Eyeliner</a>
+  </li>
+</ul>
+-->
+<br>
 
-<main class="px-3">
-    <p class="lead">
-      <img src="{{asset('image/logo.png')}}" alt="Witches Beauty Logo"width="1900" height="600">
-    </p>
-</main>
+<div class="row row-cols-1 row-cols-md-3">
+  {% for product in product %}
+  <div class="col mb-4">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">{{product.name}}</h5>
+      </div>
+      <img src="{{asset('image/placeholder.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{product.type}}</h5>
+        <p class="card-text">{{product.description}}</p>
+      </div>
+      <div class="card-foorter text-center">
+        {{product.price}} €
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
 
 {% endblock %}
