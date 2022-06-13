@@ -12,7 +12,7 @@ class AboutController extends AbstractController
 
   public function about(): Response
   {
-    return $this->render('about.html.twig');
+    return $this->render('about.html.twig'); //Retourne la template pour la partie "About Us" du site
   }
 }
 

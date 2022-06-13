@@ -6,6 +6,10 @@ witches_beauty_home:
   path: /Home
   controller: App\Controller\HomeController::home
 
+witches_beauty_product_all:
+  path: /All
+  controller: App\Controller\ProductController::all
+
 witches_beauty_product_face:
   path: /Face
   controller: App\Controller\ProductController::face
@@ -17,6 +21,10 @@ witches_beauty_product_eyes:
 witches_beauty_product_lips:
   path: /Lips
   controller: App\Controller\ProductController::lips
+
+witches_beauty_product_show:
+  path: /Show/{id}
+  controller: App\Controller\ProductController::show
 
 witches_beauty_about:
   path: /About

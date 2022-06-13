@@ -1,20 +1,6 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<!--
-<ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="btn btn-outline-secondary" href="#" role="button">Mascara</a>
-  </li>
-  <li class="nav-item">
-    <a class="btn btn-outline-secondary" href="#" role="button">Fard à paupières</a>
-  </li>
-  <li class="nav-item">
-    <a class="btn btn-outline-secondary" href="#" role="button">Eyeliner</a>
-  </li>
-</ul>
--->
-<br>
 
 <div class="row row-cols-1 row-cols-md-3">
   {% for product in product %}
@@ -39,6 +25,5 @@
   </div>
   {% endfor %}
 </div>
-
 
 {% endblock %}

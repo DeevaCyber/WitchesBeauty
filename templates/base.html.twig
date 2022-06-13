@@ -29,6 +29,7 @@
             </button>
             <div class="collapse" id="dashboard-collapse">
               <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                <li><a href="{{path('witches_beauty_product_all')}}" class="link-dark d-inline-flex text-decoration-none rounded">All</a></li>
                 <li><a href="{{path('witches_beauty_product_face')}}" class="link-dark d-inline-flex text-decoration-none rounded">Face</a></li>
                 <li><a href="{{path('witches_beauty_product_eyes')}}" class="link-dark d-inline-flex text-decoration-none rounded">Eyes</a></li>
                 <li><a href="{{path('witches_beauty_product_lips')}}" class="link-dark d-inline-flex text-decoration-none rounded">Lips</a></li>
@@ -39,7 +40,15 @@
             <a href="{{path('witches_beauty_about')}}" style="text-decoration:none"> <input type="button" value='About Us' class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"></a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-outline-success" href="#" role="button">Connexion
+            <a class="btn btn-outline-success" href="#" role="button">Cart
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket2" viewBox="0 0 16 16">
+                <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+                <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-dark" href="#" role="button">Sign in
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-square" viewBox="0 0 16 16">
               <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
               <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
@@ -62,6 +71,7 @@
             <li class="nav-item">
               <a href="#" class="nav-link px-2 text-muted">Product</a>
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="{{path('witches_beauty_product_all')}}" class="nav-link px-2 text-muted">All</a></li>
                   <li><a href="{{path('witches_beauty_product_face')}}" class="nav-link px-2 text-muted">Face</a></li>
                   <li><a href="{{path('witches_beauty_product_eyes')}}" class="nav-link px-2 text-muted">Eyes</a></li>
                   <li><a href="{{path('witches_beauty_product_lips')}}" class="nav-link px-2 text-muted">Lips</a></li>
