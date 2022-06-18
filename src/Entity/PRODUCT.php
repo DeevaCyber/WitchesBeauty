@@ -29,10 +29,6 @@ class PRODUCT
     #[ORM\Column(type: 'float')]
     private $price;
 
-    public function __toString(): string
-    {
-      return $this->name.' '.$this->category;
-    }
 
     public function getId(): ?int
     {
@@ -80,7 +76,7 @@ class PRODUCT
         return $this->type;
     }
 
-    public function setTypeProduct(string $type): self
+    public function setType(string $type): self
     {
         $this->type = $type;
 

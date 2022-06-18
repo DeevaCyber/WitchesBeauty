@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\PRODUCT;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -16,6 +17,7 @@ class DashboardController extends AbstractDashboardController
     public function index(): Response
     {
         //return parent::index();
+        $this->denyAccessUnlessGranted('ROLE_ADMIN');
 
         $routerBuilder = $this->container->get(AdminUrlGenerator::class);
         $url = $routerBuilder->setController(PRODUCTCrudController::class)->generateUrl();
@@ -50,6 +52,7 @@ class DashboardController extends AbstractDashboardController
         //yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         //yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
         yield MenuItem::linkToRoute('Back to the website', 'fas fa-home', 'witches_beauty_home');
-        yield MenuItem::linkToCrud('Product', 'fas fa-map-marker-alt', PRODUCT::class);
+        yield MenuItem::linkToCrud('Product', 'fas fa-list', PRODUCT::class);
+        yield MenuItem::linkToCrud('User','fas fa-list', User::class);
     }
 }

@@ -3,7 +3,7 @@ controllers:
     type: annotation
 
 witches_beauty_home:
-  path: /Home
+  path: /
   controller: App\Controller\HomeController::home
 
 witches_beauty_product_all:

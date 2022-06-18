@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+
+<main class="form-signin w-100 m-auto">
+  <form action="{{ path('login') }}" method="post">
+    <div class="form-floating">
+      <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control"/>
+      <label for="username">Email:</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" id="password" name="_password" class="form-control"/>
+      <label for="password">Password:</label>
+    </div>
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+  </form>
+</main>
+
+
+<!--
+<a href="{{path('app_register')}}" style="text-decoration:none"> <input type="button" value='New user ? Click here !' class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"></a>
+-->
+
+
+{% endblock %}
